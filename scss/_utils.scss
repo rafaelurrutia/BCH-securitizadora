@@ -1,0 +1,87 @@
+.row {
+    float: left;
+    width: 100%;
+    .col {
+        float: left;
+        @media #{$mobile} {
+            width: 100% !important;
+            margin-bottom: 15px;
+        }
+    }
+    &.row-30-70 {
+        .col:first-child {
+            width: 24%;
+        }
+        .col:first-child + .col {
+            width: 73%;
+            float: right;
+        }
+    }
+    &.row-50-50 {
+        .col:first-child {
+            width: 50%;
+            padding-right: 15px;
+            @media #{$mobile} {
+                padding-right: 0;
+            }
+        }
+        .col:first-child + .col {
+            width: 50%;
+            padding-left: 15px;
+            @media #{$mobile} {
+                padding-left: 0;
+            }
+        }
+    }
+    &.row-60-40 {
+        .col:first-child {
+            width: 58%;
+        }
+        .col:first-child + .col {
+            width: 38%;
+            float: right;
+        }
+    }
+    &.row-100 {
+        > .col {
+            width: 100%;
+        }
+    }
+    &.row-33-33-33 {
+        > .col {
+            width: 33.3333333%;
+        }
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.visible-xs {
+    display: none;
+    @media #{$mobile} {
+        display: block;
+    }
+}
+
+.visible-xs-inline-block{
+    display: none;
+    @media #{$mobile} {
+        display: inline-block;
+    }
+}
+
+
+.fadeInUp,
+.fadeInUpDelay,
+.fadeInDown,
+.fadeInUpD,
+.fadeInLeft,
+.fadeInRight {
+    visibility: visible !important;
+}

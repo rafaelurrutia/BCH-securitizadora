@@ -1,0 +1,153 @@
+.emisiones-body {
+    .col:nth-child(1) {
+        max-width: 50%;
+        @media #{$mobile} {
+            width: 100%;
+            max-width: inherit;
+        }
+        img {
+            height: 150px;
+        }
+        .slides {
+            width: 100%!important;
+            transition-duration: 0.6s;
+            margin-left: 0\9!important;
+            transform: translate3d(0px, 0px, 0px)!important;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            li {
+                margin-bottom: 20px;
+                img {
+                    -webkit-transition: all .3s;
+                    -moz-transition: all .3s;
+                    -ms-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                }
+                &:hover {
+                    cursor: pointer;
+                    img {
+                        -webkit-transform: scale(1.1);
+                        -moz-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        -o-transform: scale(1);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            li.flex-active-slide {
+                img {
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -ms-transform: scale(1.1);
+                    -o-transform: scale(1);
+                    transform: scale(1.1);
+                }
+            }
+            li:not(.flex-active-slide) {
+                opacity: 0.5;
+            }
+        }
+        ul {
+            display: block;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 290px;
+            @media #{$mobile} {
+                width: 100%;
+                background-color: white;
+            }
+            //margin-top: 110px;
+            li {
+                display: block;
+                &.active {
+                    a {
+                        background-color: #eeeeee;
+                        font-weight: bold;
+                    }
+                }
+                a {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    font-weight: normal;
+                    display: block;
+                    color: #17468e;
+                    width: 100%;
+                    min-height: 35px;
+                    border-bottom: 1px dashed #cccccc;
+                    padding: 9px 10px 9px 20px; 
+                    &:hover{
+                        font-weight: bold;
+                    }
+                }
+                &:last-of-type{
+                    a{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    .col:nth-child(2) {
+        width: 50%!important;
+        @media #{$mobile} {
+            width: 100%!important;
+            max-width: 100%!important;
+        }
+        .slider {
+            margin-top: 30px;
+            @media #{$mobile} {
+                margin: 0 auto;
+                float: none;
+            }
+            .flexslider {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .flex-direction-nav {
+            .flex-nav-prev {
+                .flex-prev {
+                    left: 0 !important;
+                    opacity: 1!important;
+                    margin-left: -10%;
+                    @media #{$mobile} {
+                        margin-left: 0;
+                        left: -35px !important;
+                    }
+                    &:before {
+                        content: "";
+                        background-image: url(../img/ico-slider-prev.png);
+                        background-size: 26px 41px;
+                        width: 26px;
+                        height: 41px;
+                        text-indent: -999999px;
+                        position: relative;
+                    }
+                }
+            }
+            .flex-nav-next {
+                .flex-next {
+                    right: 0 !important;
+                    margin-right: -10%;
+                    opacity: 1!important;
+                    @media #{$mobile} {
+                        margin-right: 0;
+                        right: -35px !important;
+                    }
+                    &:before {
+                        content: "";
+                        background-image: url(../img/ico-slider-next.png);
+                        background-size: 26px 41px;
+                        width: 26px;
+                        height: 41px;
+                        text-indent: -999999px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}

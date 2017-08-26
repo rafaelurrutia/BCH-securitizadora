@@ -1,0 +1,37 @@
+.contacto-body {
+    padding-left: 35px;
+    padding-right: 30px;
+    margin-top: 25px;
+    >div{
+        visibility: hidden;
+        visibility: visible\9;
+    }
+    h3 {
+        color: $colorGris1;
+        font-size: 20px;
+        display: inline;
+    }
+    hr{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    img{
+        margin-left: 12px;
+    }
+    p {
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    span{
+        display: block;
+        margin-bottom: 5px;
+    }
+    a{
+        color: $colorAzul1;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
